@@ -19,6 +19,8 @@ async function verificarInvitado() {
         .trim()
         .toUpperCase()
         .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Eliminar tildes
+        .replace(/Ñ/g, "N") // Convertir Ñ a N
+        .replace(/ñ/g, "n") // Convertir ñ a n
         .replace(/\.+$/, ""); // Eliminar punto final
 
     try {
