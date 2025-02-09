@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walter & Kristel - Invitación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <img src="imgs/Inicio.png" alt="">
+            <p style="font-size: 25px;">Nuestra canción:</p>
+            <audio controls src="Audio/Carlos_Rivera_-_Que_Lo_Nuestro_Se_Quede_Nuestro_CeeNaija.com_.mp3"
+                style="overflow: hidden;"></audio>
+        </div>
+        <!-- Carrusel de Imágenes Personalizado -->
+        <div class="carrusel">
+            <div class="carrusel-contenedor">
+                <div class="carrusel-item activo">
+                    <img src="imgs/Fotos/Foto (1).jpg" alt="Foto 1">
+                </div>
+                <div class="carrusel-item">
+                    <img src="imgs/Fotos/Foto (2).jpg" alt="Foto 2">
+                </div>
+                <div class="carrusel-item">
+                    <img src="imgs/Fotos/Foto (3).jpg" alt="Foto 3">
+                </div>
+                <div class="carrusel-item">
+                    <img src="imgs/Fotos/Foto (4).jpg" alt="Foto 3">
+                </div>
+                <div class="carrusel-item">
+                    <img src="imgs/Fotos/Foto (5).jpg" alt="Foto 3">
+                </div>
+                <div class="carrusel-item">
+                    <img src="imgs/Fotos/Foto (6).jpg" alt="Foto 2">
+                </div>
+                <div class="carrusel-item">
+                    <img src="imgs/Fotos/Foto (7).jpg" alt="Foto 3">
+                </div>
+                <div class="carrusel-item">
+                    <img src="imgs/Fotos/Foto (8).jpg" alt="Foto 3">
+                </div>
+                <div class="carrusel-item">
+                    <img src="imgs/Fotos/Foto (9).jpg" alt="Foto 3">
+                </div>
+            </div>
+            <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">&#10094;</button>
+            <button class="carrusel-btn next" onclick="moverCarrusel(1)">&#10095;</button>
+        </div>
+
+        <div class="section">
+            <!-- <p><strong>Sacramento:</strong> 3:00 p.m</p>
+            <p><strong>Fotografías:</strong> 4:30 p.m</p>
+            <p><strong>Traslado:</strong> 4:45 p.m</p>
+            <p><strong>Recepción:</strong> 5:00 p.m</p>
+            <p><strong>Final:</strong> 10:00 p.m</p> -->
+            <img src="imgs/Sacramento.png" alt="">
+            <a href="https://ul.waze.com/ul?ll=9.95568404%2C-84.08304691&navigate=no">
+                <button style="margin: -15px;">
+                    <p style="font-size: 17px;font-family: 'Montserrat', sans-serif;margin: -10px;">Ubicación Sacramento
+                    </p>
+                </button>
+            </a>
+            <img src="imgs/Recepcion.png" alt="">
+            <a href="https://ul.waze.com/ul?ll=9.95556780%2C-84.06133175&navigate=no">
+                <button style="margin: -15px;">
+                    <p style="font-size: 17px;font-family: 'Montserrat', sans-serif;margin: -10px;">Ubicación Recepción
+                    </p>
+                </button>
+            </a>
+        </div>
+
+        <div class="section">
+            <img src="imgs/Itinerario_2.png" alt="">
+            <img src="imgs/Horas.png" alt="">
+        </div>
+
+        <div class="section">
+            <img src="imgs/Vestimenta_3.png" alt="">
+            <p>Queremos que todos luzcan espectaculares en nuestro día especial. Por favor, pedimos que el atuendo sea
+                <strong>formal</strong>
+            </p>
+            <p>Como detalle especial, les solicitamos <strong>evitar el uso de los colores blanco y verde
+                    esmeralda</strong>, ya que queremos reservarlos para momentos únicos de la celebración.</p>
+            <p>¡Gracias por su comprensión!</p>
+            <img src="imgs/Trajes.png" alt="" class="vector">
+        </div>
+
+        <div class="section">
+            <img src="imgs/Sugerencia_2.png" alt="">
+            <p>Nuestro regalo más importante es <strong>tu presencia en este día</strong>, pero si deseás tener un
+                detalle con nosotros, te agradeceríamos que sea en efectivo.</p>
+            <p>Se podrá depositar en el cofre a la entrada de la recepción.</p>
+            <p><strong>¡Lluvia de sobres!</strong></p>
+            <img src="imgs/Sobre.png" alt="" class="vector">
+        </div>
+
+        <div class="section">
+            <img src="imgs/Asistencia_2.png" alt="">
+            <p>Por favor, te pedimos que confirmés tu asistencia a <Strong>más tardar el 15 de mayo</Strong>.</p>
+            <p>Podés hacerlo tocando el siguiente botón:</p>
+            <button onclick="abrirModal()" style="font-size: 17px;font-family: 'Montserrat', sans-serif;">Confirmar
+                Asistencia</button>
+            <p><strong>¡Tu confirmación es muy importante para nosotros!</strong></p>
+            <img src="imgs/Calendario.png" alt="" class="vector">
+            <img src="imgs/Te Esperamos.png" alt="">
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <h3>Confirmación de Asistencia</h3>
+                <p>Ahora serás redirigido a un formulario de Google para confirmar asistencia.</p>
+                <p>Hacemos todo esto para mantener el orden</p>
+                <p><Strong>¡Gracias por entender!</Strong></p>
+                <a href="https://forms.gle/qqxopFjTSnUGZzNFA">
+                    <button style="margin: -15px;">
+                        <p style="font-size: 17px;font-family: 'Montserrat', sans-serif;margin: -10px;">Completar Formulario</p>
+                    </button>
+                </a>
+            </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 🔥 Si la persona no ha verificado su invitación, redirigirla a index.html
+        if (!localStorage.getItem("invitadoVerificado")) {
+            alert("Debes verificar tu invitación antes de acceder.");
+            window.location.href = "index.html"; // Redirige al index
+        }
+    });
+</script>
+</html>

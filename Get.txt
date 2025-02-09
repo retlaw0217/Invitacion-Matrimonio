@@ -1,0 +1,83 @@
+function doGet(e) {
+    var sheetId = "1t70TNlkzlRCT-8RavTjw-gX6tYizCISr7W7EaqcZpew";
+    var sheetName = "Invitados";
+
+    try {
+        var sheet = SpreadsheetApp.openById(sheetId).getSheetByName(sheetName);
+        if (!sheet) return createJsonResponse({ error: "No se encontró la hoja 'Invitados'." });
+
+        var nombre = e.parameter.nombre ? e.parameter.nombre.trim().toLowerCase() : "";
+        if (!nombre) return createJsonResponse({ error: "No se ingresó un nombre." });
+
+        var data = sheet.getDataRange().getValues();
+        for (var i = 1; i < data.length; i++) {
+            if (data[i][0] && data[i][0].toString().trim().toLowerCase() === nombre) {
+                return createJsonResponse({
+                    existe: true,
+                    nombre: data[i][0],
+                    cupos: data[i][1] || "No hay acompañantes registrados",
+                    asistenciaConfirmada: data[i][2],
+                    campos: data[i][3]
+                });
+            }
+        }
+
+        return createJsonResponse({ existe: false });
+
+    } catch (error) {
+        return createJsonResponse({ error: "Error al acceder a la hoja de cálculo." });
+    }
+}
+
+function doPost(e) {
+    try {
+        var sheetId = "1t70TNlkzlRCT-8RavTjw-gX6tYizCISr7W7EaqcZpew";
+        var sheetName = "Invitados";
+        var sheet = SpreadsheetApp.openById(sheetId).getSheetByName(sheetName);
+        
+        if (!sheet) {
+            return createJsonResponse({ error: "No se encontró la hoja 'Invitados'." });
+        }
+
+        var params = JSON.parse(e.postData.contents);
+        var nombre = params.nombre ? params.nombre.trim().toLowerCase() : "";
+        var camposConfirmados = parseInt(params.camposConfirmados, 10);
+        var asistencia = params.asistencia;
+
+        if (!nombre || isNaN(camposConfirmados)) {
+            return createJsonResponse({ error: "Datos inválidos." });
+        }
+
+        var data = sheet.getDataRange().getValues();
+        for (var i = 1; i < data.length; i++) {
+            if (data[i][0] && data[i][0].toString().trim().toLowerCase() === nombre) {
+                var cuposDisponibles = parseInt(data[i][3], 10) || 0;
+                
+                if (camposConfirmados > cuposDisponibles) {
+                    return createJsonResponse({ error: "No puedes confirmar más espacios de los disponibles." });
+                }
+
+                sheet.getRange(i + 1, 3).setValue(asistencia);
+                return createJsonResponse({ mensaje: "Confirmación registrada con éxito." });
+            }
+        }
+        return createJsonResponse({ error: "No se encontró el nombre en la lista." });
+
+    } catch (error) {
+        return createJsonResponse({ error: "Error en la ejecución del script." });
+    }
+}
+
+// ✅ Función para devolver JSON con CORS correctamente
+function createJsonResponse(obj) {
+    var jsonOutput = ContentService.createTextOutput(JSON.stringify(obj))
+        .setMimeType(ContentService.MimeType.JSON);
+    
+    // ✅ Devolver CORS en la respuesta correctamente
+    return jsonOutput;
+}
+
+// ✅ Manejar solicitudes OPTIONS para CORS en POST
+function doOptions(e) {
+    return createJsonResponse({});
+}
