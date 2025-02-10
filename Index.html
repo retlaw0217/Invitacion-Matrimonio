@@ -44,13 +44,15 @@
             </section>
 
             <img src="imgs/Invitación.png" alt="">
-            <p>Antes de continuar, es importante que <strong>verifiqués tu invitación y los acompañantes que podés
-                    llevar.</strong></p>
-            <p>Podés hacerlo tocando el siguiente botón:</p>
-            <button onclick="abrirModal()" style="font-size: 17px;font-family: 'Montserrat', sans-serif;" id="btnVerificar">Verificar
+            <p>Antes de continuar...</p>
+            <p>Te invitamos a <strong>revisar tu invitación y la cantidad de acompañantes asignados </strong>para
+                asegurarte de que todo esté en orden.</p>
+            <p>Podés hacerlo fácilmente tocando el siguiente botón:</p>
+            <button onclick="abrirModal()" style="font-size: 17px;font-family: 'Montserrat', sans-serif;"
+                id="btnVerificar">Verificar
                 Asistencia</button>
-            <p><strong>Importante: </strong>queremos que sea una celebración íntima y especial, por eso la invitación es
-                para vos y tus acompañantes solamente.</p>
+            <p><strong>Importante: </strong>para mantener un ambiente íntimo y especial, la invitación es
+                <strong>exclusiva para vos y tus acompañantes asignados</strong>.</p>
             <p><strong>¡Agradecemos tu apoyo!</strong></p>
         </div>
 
@@ -60,11 +62,13 @@
                 <span class="close" onclick="cerrarModal()">&times;</span>
                 <h2>Verificación de Invitado</h2>
                 <p for="nombre">Ingresá tu nombre completo (Nombre y ambos apellidos):</p>
+                <p style="font-size: 15px;">Si te da error, intentá con tus dos nombres o bien, podés escribirnos para
+                    validar.</p>
                 <input type="text" id="nombre" placeholder="Ingresá tu nombre completo" style="margin: 10px;">
-                <button onclick="verificarInvitado()"
-                    style="font-size: 15px;font-family: 'Montserrat', sans-serif;" id="btnBuscar">Buscar</button>
-                <div id="resultado"></div>
-                <div id="confirmacionAsistencia" style="display: none;">
+                <button onclick="verificarInvitado()" style="font-size: 15px;font-family: 'Montserrat', sans-serif;"
+                    id="btnBuscar">Buscar</button>
+                <div id="resultado" style="font-size: 18px;margin-top: 8px;"></div>
+                <div id="confirmacionAsistencia" style="display: none;font-size: 15px;">
                     <p><strong>Acompañantes:</strong> <span id="listaAcompanantes"></span></p>
                     <a href="Home.html">
                         <button style="margin: -15px;">

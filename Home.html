@@ -14,46 +14,60 @@
     <div class="container">
         <div class="section">
             <img src="imgs/Inicio.png" alt="">
-            <p style="font-size: 25px;">Nuestra canción:</p>
-            <audio controls src="Audio/Carlos_Rivera_-_Que_Lo_Nuestro_Se_Quede_Nuestro_CeeNaija.com_.mp3"
+            <h1 style="font-size: 35px;">Nuestra canción:</h1>
+            <audio autoplay controls src="Audio/Carlos_Rivera_-_Que_Lo_Nuestro_Se_Quede_Nuestro_CeeNaija.com_.mp3"
                 style="overflow: hidden;"></audio>
         </div>
-        <!-- Carrusel de Imágenes Personalizado -->
-        <div class="carrusel">
-            <div class="carrusel-contenedor">
-                <div class="carrusel-item activo">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(1).webp" alt="Foto 1">
+        <div class="section">
+            <!-- Carrusel de Imágenes Personalizado -->
+            <div class="carrusel">
+                <h1 style="font-size: 35px;">Algunas fotos del compromiso:</h1>
+                <div class="carrusel-contenedor">
+                    <div class="carrusel-item activo">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(1).webp"
+                            alt="Foto 1">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(2).webp"
+                            alt="Foto 2">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(3).webp"
+                            alt="Foto 3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(4).webp"
+                            alt="Foto 3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(5).webp"
+                            alt="Foto 3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(6).webp"
+                            alt="Foto 2">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(7).webp"
+                            alt="Foto 3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(8).webp"
+                            alt="Foto 3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(9).webp"
+                            alt="Foto 3">
+                    </div>
                 </div>
-                <div class="carrusel-item">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(2).webp" alt="Foto 2">
-                </div>
-                <div class="carrusel-item">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(3).webp" alt="Foto 3">
-                </div>
-                <div class="carrusel-item">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(4).webp" alt="Foto 3">
-                </div>
-                <div class="carrusel-item">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(5).webp" alt="Foto 3">
-                </div>
-                <div class="carrusel-item">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(6).webp" alt="Foto 2">
-                </div>
-                <div class="carrusel-item">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(7).webp" alt="Foto 3">
-                </div>
-                <div class="carrusel-item">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(8).webp" alt="Foto 3">
-                </div>
-                <div class="carrusel-item">
-                    <img src="https://cdn.jsdelivr.net/gh/retlaw0217/Invitacion-Matrimonio@main/imgs/Fotos/Foto%20(9).webp" alt="Foto 3">
-                </div>
+                <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">&#10094;</button>
+                <button class="carrusel-btn next" onclick="moverCarrusel(1)">&#10095;</button>
             </div>
-            <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">&#10094;</button>
-            <button class="carrusel-btn next" onclick="moverCarrusel(1)">&#10095;</button>
+
         </div>
 
         <div class="section">
+            <h1 style="font-size: 35px;">Lugares:</h1>
             <!-- <p><strong>Sacramento:</strong> 3:00 p.m</p>
             <p><strong>Fotografías:</strong> 4:30 p.m</p>
             <p><strong>Traslado:</strong> 4:45 p.m</p>
@@ -77,7 +91,10 @@
 
         <div class="section">
             <img src="imgs/Itinerario_2.png" alt="">
-            <img src="imgs/Horas.png" alt="">
+            <p style="font-size: 25px;">Para nosotros, lo más importante es el <strong>Sacramento</strong> que nos une
+                en amor y fe. Por eso, queremos
+                que <strong>nos acompañés desde ese momento tan especial</strong> y seás parte de la ceremonia.</p>
+            <img src="imgs/ItinerarioV2.png" alt="">
         </div>
 
         <div class="section">
@@ -115,12 +132,14 @@
             <div class="modal-content">
                 <span class="close" onclick="cerrarModal()">&times;</span>
                 <h3>Confirmación de Asistencia</h3>
-                <p>Ahora serás redirigido a un formulario de Google para confirmar asistencia.</p>
-                <p>Hacemos todo esto para mantener el orden</p>
-                <p><Strong>¡Gracias por entender!</Strong></p>
+                <p>Enseguida serás dirigido a un formulario de Google para confirmar tu presencia en nuestro gran día.
+                </p>
+                <p>Agradecemos tu apoyo, ya que esto nos ayudará a organizar todo con mucho cariño y cuidado.</p>
+                <p><Strong>¡Gracias por tu comprensión y por ser parte de este momento tan especial!</Strong></p>
                 <a href="https://forms.gle/qqxopFjTSnUGZzNFA">
                     <button style="margin: -15px;">
-                        <p style="font-size: 17px;font-family: 'Montserrat', sans-serif;margin: -10px;">Completar Formulario</p>
+                        <p style="font-size: 17px;font-family: 'Montserrat', sans-serif;margin: -10px;">Completar
+                            Formulario</p>
                     </button>
                 </a>
             </div>
@@ -134,4 +153,5 @@
         }
     });
 </script>
+
 </html>
