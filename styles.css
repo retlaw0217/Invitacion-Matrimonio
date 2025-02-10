@@ -127,10 +127,10 @@ a, button {
 }
 
 .countdown span {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: 400;
     color: #253E32;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 5px;
 }
 
