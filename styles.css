@@ -89,84 +89,58 @@ a, button {
     cursor: pointer;
 }
 
-/* Estilos Contador */
-.contador {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    min-height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.contador h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #253E32;
-}
-
+/* Contador*/
 .countdown {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-wrap: nowrap; /* Deshabilita el salto de línea */
-    gap: 10px; /* Espacio entre los elementos */
-    box-sizing: border-box;
-    align-items: center;
     justify-content: center;
-    overflow: hidden; /* Evita que se desborde */
+    align-items: center;
+    flex-wrap: wrap; /* Permitir que se acomoden si no caben */
+    width: 100%;
+    gap: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .countdown div {
     display: grid;
     place-items: center;
-    width: 70px; /* Define un tamaño fijo */
+    min-width: 60px; /* Asegura un tamaño mínimo */
+    width: 70px;
 }
 
 .countdown p {
-    display: grid;
-    place-items: center;
     width: 70px;
     height: 70px;
+    font-size: 20px;
+    text-align: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 20px;
     font-weight: bold;
     background-color: #253E32;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
-.countdown span {
-    display: block;
-    padding: 5px;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #253E32;
-    font-family: 'Great Vibes', cursive;
-}
-
-/* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
     .countdown {
-        /* Asegura que todo se mantenga en línea en pantallas pequeñas */
-        justify-content: space-between; /* Alinea los elementos con más espacio en pantallas pequeñas */
+        flex-wrap: wrap; /* Permite que los elementos se acomoden mejor */
+    }
+
+    .countdown div {
+        min-width: 50px;
+        width: 50px;
     }
 
     .countdown p {
-        font-size: 1.5rem; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
+        font-size: 1.2rem;
         width: 50px;
         height: 50px;
     }
 
     .countdown span {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
+
 
 .carrusel {
     position: relative;

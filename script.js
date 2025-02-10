@@ -48,40 +48,36 @@ async function verificarInvitado() {
 
 //Funcionalidad contador
 const $days = document.getElementById('days'),
-$hours = document.getElementById('hours'),
-$minutes = document.getElementById('minutes'),
-$seconds = document.getElementById('seconds');
+      $hours = document.getElementById('hours'),
+      $minutes = document.getElementById('minutes'),
+      $seconds = document.getElementById('seconds');
 
-//Fecha futuro
 const countdownDate = new Date('Jun 28, 2025 15:00:00').getTime();
-let interval = setInterval(function(){
-    //Obtener fecha actual y milisegundos
+
+let interval = setInterval(() => {
     const now = new Date().getTime();
-  
-    //Obtener distancias entre fechas
     let distance = countdownDate - now;
-  
-    //Calculos a dias/horas/minutos/segundos
-    let days = Math.floor(distance / (1000*60*60*24));
-    let hours = Math.floor(distance % (1000*60*60*24) / (1000*60*60));
-    let minutes = Math.floor(distance % (1000*60*60) / (1000*60));
-    let seconds = Math.floor(distance % (1000*60) / (1000));
-  
-    //Escribir resultados
-    $days.innerHTML = days;
-    $hours.innerHTML = hours;
-    $minutes.innerHTML = minutes;
-    $seconds.innerHTML = ('0' + seconds).slice(-2);
-  
-    //Cuando llegue a 0 
-    if(distance < 0){
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Agregar ceros adelante si es menor a 10
+    $days.textContent = days.toString().padStart(2, "0");
+    $hours.textContent = hours.toString().padStart(2, "0");
+    $minutes.textContent = minutes.toString().padStart(2, "0");
+    $seconds.textContent = seconds.toString().padStart(2, "0");
+
+    if (distance < 0) {
         clearInterval(interval);
-        $days.innerHTML = ('00');
-        $hours.innerHTML = ('00');
-        $minutes.innerHTML = ('00');
-        $seconds.innerHTML = ('00');
+        $days.textContent = "00";
+        $hours.textContent = "00";
+        $minutes.textContent = "00";
+        $seconds.textContent = "00";
     }
 }, 1000);
+
 
 //Carrusel
 let indiceActual = 0;
