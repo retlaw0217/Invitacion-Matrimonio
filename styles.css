@@ -94,7 +94,7 @@ a, button {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Permitir que se acomoden si no caben */
+    flex-wrap: wrap;
     width: 100%;
     gap: 10px;
     box-sizing: border-box;
@@ -102,45 +102,59 @@ a, button {
 }
 
 .countdown div {
-    display: grid;
-    place-items: center;
-    min-width: 60px; /* Asegura un tamaño mínimo */
-    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 70px;
+    width: auto;
 }
 
 .countdown p {
     width: 70px;
     height: 70px;
-    font-size: 20px;
+    line-height: 70px; /* Asegura que el texto esté bien centrado verticalmente */
+    font-size: 24px;
     text-align: center;
     border-radius: 50%;
     color: #fff;
     font-weight: bold;
     background-color: #253E32;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.countdown span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #253E32;
+    font-family: 'Great Vibes', cursive;
+    margin-top: 5px;
+}
+
+/* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
     .countdown {
-        flex-wrap: wrap; /* Permite que los elementos se acomoden mejor */
+        flex-wrap: wrap;
     }
 
     .countdown div {
         min-width: 50px;
-        width: 50px;
     }
 
     .countdown p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         width: 50px;
         height: 50px;
+        line-height: 50px;
     }
 
     .countdown span {
         font-size: 1rem;
     }
 }
-
 
 .carrusel {
     position: relative;
