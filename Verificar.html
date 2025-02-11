@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walter & Kristel - Invitación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="titulo">
+                <img src="imgs/Save the Date_3.png" alt="">
+            </div>
+            <img src="imgs/Fecha.png" alt="">
+            <img src="imgs/Hora.png" alt="">
+            <section class="contador">
+                <img src="imgs/Faltan.png" alt="" style="width: 55%;">
+                <div class="countdown">
+                    <div>
+                        <p id="days">00</p>
+                        <span>Días</span>
+                    </div>
+                    <div>
+                        <p id="hours">00</p>
+                        <span>Horas</span>
+                    </div>
+                    <div>
+                        <p id="minutes">00</p>
+                        <span>Minutos</span>
+                    </div>
+                    <div>
+                        <p id="seconds">00</p>
+                        <span>Segundos</span>
+                    </div>
+                </div>
+            </section>
+            <img src="imgs/GuardarFecha.png" alt="" style="margin-top: 30px;">
+            <img src="imgs/Junio.png" alt="" style="width: 90%;margin-top: 30px;">
+            <img src="imgs/VerificarInvitacion.png" alt="">
+            <p style="margin-top: -13px;">Te invitamos a <strong>revisar tu invitación y la cantidad de acompañantes
+                    asignados </strong>para
+                asegurarte de que todo esté en orden.</p>
+            <p>Podés hacerlo fácilmente tocando el siguiente botón:</p>
+            <button onclick="abrirModal()" style="font-size: 17px;font-family: 'Montserrat', sans-serif;"
+                id="btnVerificar">Verificar Invitación</button>
+            <p><strong>Importante: </strong>esto es solo para verificar. La confirmación, la haremos después...</p>
+            <p><strong>¡Gracias!</strong></p>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <h2>Verificación de Invitado</h2>
+                <p for="nombre">Ingresá tu nombre completo (Nombre y ambos apellidos):</p>
+                <p style="font-size: 15px;">Si te da error, intentá con tus dos nombres o bien, podés escribirnos para
+                    validar.</p>
+                <input type="text" id="nombre" placeholder="Ingresá tu nombre completo" style="margin: 10px;">
+                <button onclick="verificarInvitado()" style="font-size: 15px;font-family: 'Montserrat', sans-serif;"
+                    id="btnBuscar">Buscar</button>
+                <div id="resultado" style="font-size: 18px;margin-top: 8px;"></div>
+                <div id="confirmacionAsistencia" style="display: none;font-size: 15px;">
+                    <p><strong>Acompañantes:</strong> <span id="listaAcompanantes"></span></p>
+                    <!--<a href="Home.html">
+                        <button style="margin: -15px;">
+                            <p style="font-size: 17px;font-family: 'Montserrat', sans-serif;margin: -15px;">Continuar
+                                Navegando</p>
+                        </button>
+                    </a>-->
+                    <!-- <button onclick="mostrarFormulario()">Confirmar asistencia</button>-->
+                </div>
+                <div id="formularioAsistencia" style="display: none;">
+                    <!--<p><strong>Acompañantes:</strong> <span id="listaAcompanantes"></span></p>
+                    <label for="camposConfirmados">Cantidad de espacios a confirmar:</label>
+                    <input type="number" id="camposConfirmados" min="1" max="1">
+                    <label for="asistencia">¿Asistirá?</label>
+                    <select id="asistencia">
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                    <button onclick="enviarConfirmacion()">Enviar</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
