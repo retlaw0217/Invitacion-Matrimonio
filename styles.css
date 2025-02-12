@@ -260,3 +260,31 @@ audio {
     display: block;
     margin: auto;
 }
+
+/* Ajustar el tamaño del reproductor de audio */
+audio {
+    width: 100%;
+    max-width: 300px;
+    height: 40px; /* Reducir la altura */
+    display: block;
+    margin: auto;
+    border-radius: 20px; /* Redondear bordes para que se vea más elegante */
+}
+
+/* Ajustar aún más el tamaño del reproductor de audio */
+audio {
+    width: 100%;
+    max-width: 250px; /* Reducir más el tamaño máximo */
+    height: 35px; /* Ajustar la altura */
+    display: block;
+    margin: auto;
+    border-radius: 15px; /* Bordes más redondeados */
+}
+
+/* Ajuste específico para dispositivos móviles */
+@media (max-width: 600px) {
+    audio {
+        max-width: 220px; /* Reducir más en pantallas pequeñas */
+        height: 30px;
+    }
+}
