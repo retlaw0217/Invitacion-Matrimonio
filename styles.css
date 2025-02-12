@@ -205,3 +205,37 @@ a, button {
 .carrusel-btn:hover {
     background: rgba(0, 0, 0, 0.8);
 }
+
+/* Forzar fondo claro */
+body {
+    background-color: #ffffff !important;
+    color: #253E32 !important;
+}
+
+/* Asegurar que el modal sea visible y desplazable */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto; /* Permite desplazarse si el contenido es grande */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Asegurar que los botones dentro del modal sean accesibles */
+.modal-content button {
+    margin-top: 20px;
+}

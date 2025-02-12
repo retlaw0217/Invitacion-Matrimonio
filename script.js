@@ -98,3 +98,13 @@ function moverCarrusel(direccion) {
     contenedor.style.transform = `translateX(${desplazamiento}%)`;
 }
 
+
+// 🔥 Mejorar la validación del localStorage para Home.html
+document.addEventListener("DOMContentLoaded", function () {
+    const isHomePage = window.location.pathname.includes("Home.html");
+    
+    if (isHomePage && !localStorage.getItem("invitadoVerificado")) {
+        alert("Debes verificar tu invitación antes de acceder.");
+        window.location.replace("index.html"); // Redirigir sin posibilidad de volver con 'atrás'
+    }
+});
