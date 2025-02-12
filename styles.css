@@ -12,7 +12,7 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
-    background: white;
+    background: white !important;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -37,13 +37,13 @@ img.vector {
 }
 
 h1, h2, h3 {
-    color: #253E32;
+    color: #253E32 !important;
     font-size: 30px;
 }
 .section {
     margin: 20px 0;
     padding: 15px;
-    background: #ecf0f1;
+    background: #ecf0f1 !important;
     border-radius: 5px;
     background-image: url('imgs/Background1.png');
     background-size: cover; /* Asegura que la imagen cubra toda el área */
@@ -54,8 +54,8 @@ h1, h2, h3 {
 
 a, button {
     text-decoration: none;
-    color: white;
-    background: #253E32;
+    color: white !important;
+    background: #253E32 !important;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
@@ -75,7 +75,7 @@ a, button {
     padding-top: 100px;
 }
 .modal-content {
-    background-color: white;
+    background-color: white !important;
     margin: auto;
     padding: 20px;
     width: 80%;
@@ -117,9 +117,9 @@ a, button {
     font-size: 24px;
     text-align: center;
     border-radius: 50%;
-    color: #fff;
+    color: #fff !important;
     font-weight: bold;
-    background-color: #253E32;
+    background-color: #253E32 !important;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
@@ -129,7 +129,7 @@ a, button {
 .countdown span {
     font-size: 0.8rem;
     font-weight: 400;
-    color: #253E32;
+    color: #253E32 !important;
     font-family: 'Montserrat', sans-serif;
     margin-top: 5px;
 }
@@ -185,8 +185,8 @@ a, button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: rgba(0, 0, 0, 0.5) !important;
+    color: white !important;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -203,12 +203,12 @@ a, button {
 }
 
 .carrusel-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8) !important;
 }
 
 /* Forzar fondo claro */
 body {
-    background-color: #ffffff !important;
+    background-color: #253E32 !important;
     color: #253E32 !important;
 }
 
