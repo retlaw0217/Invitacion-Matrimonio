@@ -72,7 +72,6 @@ a, button {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 100px;
     overflow-y: auto; /* Permitir desplazamiento */
     overflow: hidden; /* Evitar scroll en el fondo */
 }
