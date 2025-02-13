@@ -71,12 +71,11 @@ a, button {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     overflow-y: auto; /* Permitir desplazamiento */
     overflow: hidden; /* Evitar scroll en el fondo */
+    background-image: url('imgs/Background1.png');
 }
 .modal-content {
-    background-color: white !important;
     margin: auto;
     padding: 20px;
     width: 80%;
@@ -224,12 +223,10 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     overflow-y: auto; /* Permite desplazarse si el contenido es grande */
 }
 
 .modal-content {
-    background-color: white;
     margin: 10% auto;
     padding: 20px;
     width: 90%;
@@ -244,7 +241,6 @@ body {
 }
 /* Asegurar que el modal se expanda según su contenido */
 .modal-content {
-    background-color: white;
     margin: 10% auto;
     padding: 20px;
     width: 90%;

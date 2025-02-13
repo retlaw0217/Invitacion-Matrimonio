@@ -45,9 +45,15 @@
             <p style="margin-top: -13px;">Te invitamos a <strong>revisar tu invitación y la cantidad de acompañantes
                     asignados </strong>para
                 asegurarte de que todo esté en orden.</p>
-            <p>Podés hacerlo fácilmente tocando el siguiente botón:</p>
-            <button onclick="abrirModal()" style="font-size: 17px;font-family: 'Montserrat', sans-serif;"
-                id="btnVerificar">Verificar Invitación</button>
+            <p>Podés hacerlo fácilmente ingresando tu nombre completo (nombre y apellidos).</p>
+            <p style="font-size: 15px;">Si te da error, intentá con tus dos nombres o bien, podés escribirnos para validar.</p>
+            <input type="text" id="nombre" placeholder="Ingresá tu nombre completo" style="margin: 10px;">
+            <button onclick="verificarInvitado()" style="font-size: 15px !important;font-family: 'Montserrat', sans-serif;" id="btnBuscar">Buscar</button>
+            <div id="resultado" style="font-size: 18px;margin-top: 8px;"></div>
+            <div id="confirmacionAsistencia" style="display: none;font-size: 15px;">
+            <p><strong>Acompañantes:</strong> <span id="listaAcompanantes"></span></p>
+            <!--<button onclick="abrirModal()" style="font-size: 17px;font-family: 'Montserrat', sans-serif;"
+                id="btnVerificar">Verificar Invitación</button>-->
             <p><strong>Importante: </strong>esto es solo para verificar. La confirmación, la haremos después...</p>
             <p><strong>¡Gracias!</strong></p>
         </div>
